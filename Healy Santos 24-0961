@@ -1,0 +1,42 @@
+#para hacer un saludo
+from typing import Counter
+
+
+nombre = "Maria"
+print("Hola, " + nombre)
+
+#para hacer una suma
+a = 20
+b = 2
+print(a + b)
+
+#para calcular el area de un rectangulo 
+base = 4
+altura = 5
+area = base * altura
+print(area)
+
+#para ver si un numero es par o impar 
+def es_par(numero):
+  
+ if numero % 2 == 0:
+    return "par"  
+ else:
+    return "impar"
+numero = int(input(print("ingresa el numero"))) 
+result = es_par(numero)
+print(result) 
+
+es_par(numero) 
+
+#para Convertir de Grados Celsius a Fahrenheit
+def celsius_a_fahrenheit(celsius):
+
+   fahrenheit = (celsius * 9/5)
+   return fahrenheit
+
+celsius = float(input("Ingresa la temperatura en grados Celsius: "))
+fahrenheit = celsius_a_fahrenheit(celsius)
+print(f"{celsius} grados Celsius son {fahrenheit} grados fahrenheit")
+
+celsius_a_fahrenheit(celsius)
