@@ -40,3 +40,72 @@ fahrenheit = celsius_a_fahrenheit(celsius)
 print(f"{celsius} grados Celsius son {fahrenheit} grados fahrenheit")
 
 celsius_a_fahrenheit(celsius)
+
+#para hallar el Máximo de Tres Números
+def maxtres(x: int, y: int, z: int) -> int:
+  if x > y and x > z:
+        return x
+  elif y > x and y > z:
+        return y
+  else:
+        return z
+
+x = int(input("Ingresa el primer número: "))
+y = int(input("Ingresa el segundo número: "))
+z = int(input("Ingresa el tercer número: "))
+maximo = maxtres(x, y, z)
+print("El máximo de los tres números es:", maximo)
+maxtres(x, y, z)
+
+##para hallar el palindromo 
+def es_palindromo(cadena):
+    cadena = cadena.lower().replace(" ", "")
+    def palindromo(palabra):
+      if len(palabra)<=1: 
+        print("Si es un palindromo")
+      else:              
+        if palabra[0]!=palabra[-1]:  
+          print("No es un palindromo") 
+        else:                          
+          palabra=palabra[1:-1]        
+          palindromo(palabra)          
+    cadena=input('Dime una palabra:').lower()
+    palindromo(cadena)
+  
+es_palindromo(cadena)
+  
+#Para hallar el factorial de un numero
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+numero = int(input("Ingresa un número: "))
+resultado = factorial(numero)
+print("El factorial de", numero, "es", resultado)
+
+factorial(numero)
+      
+#para contar vocales en una palabra
+def contar_vocales(palabra):
+  Count, vocales = 0, "aeiouAEIOU"
+  for letra in palabra:
+    if letra in vocales:
+      Count += 1
+
+  return Count
+
+palabra = input("Ingresa una palabra: ")
+cantidad_vocales = contar_vocales(palabra)
+print("La palabra", palabra, "tiene", cantidad_vocales, "vocales.")
+
+#para saber si el numero es primo
+def es_primo(num):
+    for n in range(2, num):
+        if num % n == 0:
+            print("No es primo", n, "es divisor")
+            return False
+    print("Es primo")
+    return True
+print(es_primo(5))
